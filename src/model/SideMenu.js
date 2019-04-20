@@ -14,15 +14,16 @@ export default {
     counter: 100,
   },
    effects: { 
-   // 定义 effects 成员
-    'onDidGet': function*() {}
+   
   },
   reducers: {
     onDidGet(state) {
-      const nextData = [...state.data,{name:'new'}];
-      console.log(nextData);
+      const couter=parseInt(state.couter)+1;
+      const nextId=parseInt(state.couter)+1;
+      const nextData = [...state.data,{id:nextId,'name':'ljl'}];
       return {
-        data: nextData
+        data: nextData,
+        couter:couter
       };
      
     }
